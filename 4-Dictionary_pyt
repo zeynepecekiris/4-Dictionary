@@ -1,0 +1,659 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "67909ef8-8525-416d-834d-00f9d219237f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#key - value pairing"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "c14aa5a9-724b-4011-a313-7ecfc9767937",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fruit_list = [\"banana\",\"apple\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "4041560a-db2f-4897-a5cf-06540294d5e3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "calorie_list = [100,150]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "4a0244e3-a5e2-425f-9a71-2a0284570287",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'banana'"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fruit_list[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "1aad9fcc-8c8d-4e2f-ad6f-1a6541c09b4d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "calorie_list[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "5e787a75-6496-4f14-b278-ba789d9e42c8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fitness_dictionary = {\"banana\":100,\"apple\":150}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "75277180-1e3f-4bff-bca1-d6db970735bf",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(fitness_dictionary)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "2a07a243-bef8-43a0-9f8b-0d97521f49e7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary[\"banana\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "6c2f4369-2811-4533-b2f4-c80e38915292",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "150"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary[\"apple\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "07fed638-5635-4994-9a55-de243e58271b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_keys(['banana', 'apple'])"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary.keys()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "dc1ee357-716e-44a9-be42-75ab62e40d79",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_values([100, 150])"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary.values()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "b9465637-1a84-43c2-ae0d-0e58bc9bd905",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_values"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(fitness_dictionary.values())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "2303902f-1d51-44da-a33e-a0dacef561bd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[100, 150]"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(fitness_dictionary.values())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "ae6177a1-eddc-4ff0-9a4e-f5bf236c7910",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fitness_dictionary[\"banana\"] = 200"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "ea2c1a78-f347-423b-a7ec-0192fd8ae225",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'banana': 200, 'apple': 150}"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "05994015-f6ef-4621-9335-7e4ee18d92bf",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fitness_dictionary[\"melon\"] = 300"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "6d57f978-a71e-4524-bb3d-6f7e3349285e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'banana': 200, 'apple': 150, 'melon': 300}"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "32ce51b1-4161-4bcf-be6d-eb66c335df05",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "150"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary[\"apple\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "6c2eb3fa-12db-465a-945e-b0e8677c8182",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Help on built-in function get:\n",
+      "\n",
+      "get(key, default=None, /) method of builtins.dict instance\n",
+      "    Return the value for key if key is in the dictionary, else default.\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "help(fitness_dictionary.get)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "0edd24af-bcf4-44a2-a1bb-4fb94114a23e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "150"
+      ]
+     },
+     "execution_count": 46,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary.get(\"apple\",0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "fd87e658-724d-42eb-ab59-ee42a52b348f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "150"
+      ]
+     },
+     "execution_count": 43,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "id": "aa060a34-0f5f-4478-adb7-d183818f4df1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 48,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary.get(\"appl\",0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "30a04ce3-6c40-4204-a81f-13dca0dc5abf",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'banana': 200, 'apple': 150, 'melon': 300}"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fitness_dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "id": "92a54517-897c-47cb-a625-c17e57305e70",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_dictionary = {100:\"a\",200:\"b\",300:\"c\"}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "b120d341-fdf4-4ee9-9041-cd5c8a9e9bf7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'a'"
+      ]
+     },
+     "execution_count": 56,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_dictionary[100]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "id": "fac4db6f-9826-43e9-902c-5cafe1d8aef6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'b'"
+      ]
+     },
+     "execution_count": 62,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_dictionary[200]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "83a036e5-1186-4329-ba90-ce09bddb278d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_dictionary = {\"key1\":\"value1\",\"key2\":\"value2\",\"key3\":\"value3\"}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "3dbc7983-748a-4a25-b02d-32e9cf20bad1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'value1'"
+      ]
+     },
+     "execution_count": 66,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_dictionary[\"key1\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "id": "364c4ada-67ba-4038-974b-61956c699da9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_mixed_dictionary = {\"key1\":100, \"key2\":3.14,\"key3\":[10,20,30]}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "id": "3e861f78-c9e8-4da6-8113-329c8b15d11b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3.14"
+      ]
+     },
+     "execution_count": 70,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_mixed_dictionary[\"key2\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "id": "a5b06e55-7870-4dc8-8b1f-f444ca67bf62",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[10, 20, 30]"
+      ]
+     },
+     "execution_count": 72,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_mixed_dictionary[\"key3\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "id": "42da7884-feb7-4f16-bb6d-436c5768dad5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "20"
+      ]
+     },
+     "execution_count": 74,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_mixed_dictionary[\"key3\"][1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 78,
+   "id": "f0c3df6f-7def-4304-9b70-a502a1b416e8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "last_dictionary = {\"k1\":10,\"k2\":[10,20,30,40,50],\"k3\":\"string\",\"k4\":{\"a\":100,\"b\":200}}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "id": "d73065ac-e501-4d5c-97ea-8269e0de0609",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "20"
+      ]
+     },
+     "execution_count": 84,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "last_dictionary[\"k2\"][1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 88,
+   "id": "9f9f1957-dcfe-42e2-97b1-d92933a4840d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "200"
+      ]
+     },
+     "execution_count": 88,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "last_dictionary[\"k4\"][\"b\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9babf1a7-9fb4-4c8d-9c76-7c698860bf7c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
